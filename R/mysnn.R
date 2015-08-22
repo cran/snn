@@ -16,14 +16,22 @@ function(train, test, lambda){
 		weightstar[i] = (1+d/2-d/(2*Kstar^(2/d))*(i^(1+2/d)-(i-1)^(1+2/d)))/Kstar
 	}
 	
-	if(is.vector(test) == TRUE){
-	
-		test.mat = t(as.matrix(test))
-		
-	}else{
-	
-		test.mat = test
-	}
+    if(is.vector(test) == TRUE){
+        
+        if(dim(train)[2] - 1 == 1){
+            # d = 1 case
+            test.mat = as.matrix(test)
+            
+        }else{
+            # d > 1 case
+            test.mat = t(as.matrix(test))
+        }
+        
+    }else{
+        
+        test.mat = test
+    }
+
 	
 	if(dim(test.mat)[2] != (dim(train)[2]-1)) stop("training data and test data have different dimensions")	
 	

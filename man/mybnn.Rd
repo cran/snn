@@ -13,7 +13,7 @@ mybnn(train, test, ratio)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{train}{
-	Matrix of training data sets
+	Matrix of training data sets. An n by (d+1) matrix, where n is the sample size and d is the dimension. The last column is the class label.
 }
   \item{test}{
 	Vector of a test point. It also admits a matrix input with each row representing a new test point.

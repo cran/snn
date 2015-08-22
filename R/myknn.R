@@ -6,9 +6,16 @@ function(train, test, K){
 	weight = rep(0,n)
 	weight[1:K] = 1/K
 	
-	if(is.vector(test) == TRUE){
-	
-		test.mat = t(as.matrix(test))
+    if(is.vector(test) == TRUE){
+        
+        if(dim(train)[2] - 1 == 1){
+            # d = 1 case
+            test.mat = as.matrix(test)
+            
+        }else{
+            # d > 1 case
+            test.mat = t(as.matrix(test))
+        }
 		
 	}else{
 	

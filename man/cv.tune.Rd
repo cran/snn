@@ -12,7 +12,7 @@ cv.tune(train, numgrid = 20, classifier = "snn")
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{train}{
-	Matrix of training data sets
+	Matrix of training data sets. An n by (d+1) matrix, where n is the sample size and d is the dimension. The last column is the class label.
 }
   \item{numgrid}{
 	Number of grids for search

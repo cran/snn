@@ -13,7 +13,7 @@ A package for implementations of various nearest neighbor classifiers, including
 Package: \tab snn\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
-Date: \tab 2015-07-26\cr
+Date: \tab 2015-07-31\cr
 License: \tab GPL-3 \cr
 }
 The package "snn" provides 8 main functions:
